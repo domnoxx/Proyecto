@@ -1,16 +1,19 @@
 package com.example.estudiante.proyecto;
 
-
+import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ProgressBar;
 
-public class inicio extends AppCompatActivity {
-    public static final int segundos =4;
+public class inicio extends Activity {
+    public static final int segundos =8;
     public static final int mils= segundos*1000;
     public static final int delay = 2;
     private ProgressBar pbar;
@@ -19,7 +22,9 @@ public class inicio extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
             super.onCreate(savedInstanceState);
-
+            this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+            getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
             setContentView(R.layout.activity_inicio);
             animacion();
             pbar= (ProgressBar)findViewById(R.id.pBar);
@@ -50,7 +55,7 @@ public class inicio extends AppCompatActivity {
 
             @Override
             public void onFinish() {
-                Intent i=new Intent(inicio.this,pantallaInicio.class);
+                Intent i=new Intent(inicio.this,menu.class);
                 startActivity(i);
             }
         }.start();
