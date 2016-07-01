@@ -24,7 +24,8 @@
             android:screenOrientation="landscape"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
         <activity android:name=".instruccion" />
-        <activity android:name=".juego"></activity>
+        <activity android:name=".pantallauno" />
+        <activity android:name=".niveluno"></activity>
     </application>
 
 </manifest>
