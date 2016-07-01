@@ -10,23 +10,31 @@
     tools:context="com.example.estudiante.proyecto.menu"
     android:background="@drawable/menu">
 
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imbJugar"
-        android:src="@drawable/jugar"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="60dp" />
-
-    <ImageView
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView"
-        android:src="@drawable/instruc"
-        android:layout_column="19"
-        android:layout_alignParentEnd="true"
-        android:scaleType="center"
-        android:layout_centerInParent="true" />
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton"
+            android:src="@drawable/boton"
+            android:layout_alignParentBottom="false"
+            android:layout_alignParentLeft="false"
+            android:layout_alignWithParentIfMissing="false"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="150dp"
+            android:onClick="jugar"/>
+
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton2"
+            android:src="@drawable/btninstruccion"
+            android:layout_gravity="center_horizontal"
+            android:onClick="instruccion"/>
+    </LinearLayout>
 
 </RelativeLayout>
